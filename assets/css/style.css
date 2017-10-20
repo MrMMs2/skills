@@ -1,0 +1,610 @@
+@CHARSET "ISO-8859-1";
+
+.question {
+	font-weight: bold;
+	color: #333;
+	margin: 10px 10px 10px 0px !important;
+}
+
+.child {
+	margin-left: 25px !important;
+}
+
+.items_questions, #accordion {
+	margin-left: 15% !important;
+}
+
+.generaltable {
+	width: 100%;
+}
+
+.generaltable td {
+	font-size: 11px;
+	text-align: center;
+}
+
+.generaltable td input {
+	padding: 3px;
+	width: 96%;
+}
+
+.generaltable th {
+	font-weight: bolder !important;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+.other_methodologies {
+    max-width: 39%;
+}
+
+.other_methodologies td {
+    text-align: left !important;
+}
+/*ESTILOS TABELA PARA O RELATORIO*/
+/* areas*/
+.table-head0-areas{
+	border-top: 2px solid #2C3E50 !important;
+	background-color: #2C3E50 !important;
+	color: white;
+}
+.table-head1-areas{
+	border-top: 1px solid #34495E !important;
+	background-color: #34495E !important;
+	color: white;
+}
+.table-r0-areas{
+	border-top: 1px solid #425C77 !important;
+	background-color: #425C77 !important;
+	color: white;
+}
+.table-r1-areas{
+	border-top: 1px solid #4B6987 !important;
+	background-color: #4B6987 !important;
+	color: white;
+}
+/* cursos */
+.table-head0-cursos{
+    border-top: 2px solid #16A085 !important;
+	background-color: #16A085 !important;
+    color: #000;
+}
+.table-head1-cursos{
+	border-top: 1px solid #1BBE9D !important;
+	background-color: #1BBE9D !important;
+    color: #000;
+}
+.table-r0-cursos{
+	border-top: 1px solid #1DD3AF !important;
+	background-color: #1DD3AF !important;
+    color: #000;
+}
+.table-r1-cursos{
+	border-top: 1px solid #1EDBB5 !important;
+	background-color: #1EDBB5 !important;
+    color: #000;
+}
+/*vagas*/
+.table-head0-vagas{
+    border-top: 2px solid #27AE60 !important;
+	background-color: #27AE60 !important;
+    color: #000;
+}
+.table-head1-vagas{
+	border-top: 1px solid #2ED173 !important;
+	background-color: #2ED173 !important;
+	color: #000;
+}
+.table-r0-vagas{
+	border-top: 1px solid #48D785 !important;
+	background-color: #48D785 !important;
+	color: #000;
+}
+.table-r1-vagas{
+	border-top: 1px solid #73E1A2 !important;
+	background-color: #73E1A2 !important;
+	color: #000;
+}
+/*capacitados*/
+.table-head0-capacitados{
+	border-top: 2px solid #2980B9 !important;
+	background-color: #2980B9 !important;
+	color: #000;
+}
+.table-head1-capacitados{
+	border-top: 1px solid #3498DB !important;
+	background-color: #3498DB !important;
+	color: #000;
+}
+.table-r0-capacitados{
+	border-top: 1px solid #4AA4DF !important;
+	background-color: #4AA4DF !important;
+	color: #000;
+}
+.table-r1-capacitados{
+	border-top: 1px solid #5AACE2 !important;
+	background-color: #5AACE2 !important;
+	color: #000;
+}
+
+/*numero evasao*/
+.table-head0-nevasao{
+	border-top: 2px solid #8E44AD !important;
+	background-color: #8E44AD !important;
+	color: #000;
+}
+.table-head1-nevasao{
+	border-top: 1px solid #9B59B6 !important;
+	background-color: #9B59B6 !important;
+	color: #000;
+}
+.table-r0-nevasao{
+	border-top: 1px solid #A66BBE !important;
+	background-color: #A66BBE !important;
+	color: #000;
+}
+.table-r1-nevasao{
+	border-top: 1px solid #AF7BC6 !important;
+	background-color: #AF7BC6 !important;
+	color: #000;
+}
+
+/*percentual evasao*/
+.table-head0-pevasao{
+	border-top: 2px solid #F2CA27 !important;
+	background-color: #F2CA27 !important;
+	color: #000;
+}
+.table-head1-pevasao{
+	border-top: 1px solid #F4D24A !important;
+	background-color: #F4D24A !important;
+	color: #000;
+}
+.table-r0-pevasao{
+	border-top: 1px solid #F7DD75 !important;
+	background-color: #F7DD75 !important;
+	color: #000;
+}
+.table-r1-pevasao{
+	border-top: 1px solid #F9E493 !important;
+	background-color: #F9E493 !important;
+	color: #000;
+}
+
+/*Instrutures*/
+.table-head0-instrutores{
+	border-top: 2px solid #E85344 !important;
+	background-color: #E85344 !important;
+	color: #000;
+}
+.table-head1-instrutores{
+	border-top: 1px solid #EB695A !important;
+	background-color: #EB695A !important;
+	color: #000;
+}
+.table-r0-instrutores{
+	border-top: 1px solid #EE8377 !important;
+	background-color: #EE8377 !important;
+	color: #000;
+}
+.table-r1-instrutores{
+	border-top: 1px solid #F09388 !important;
+	background-color: #F09388 !important;
+	color: #000;
+}
+
+/*Orcamento*/
+.table-head0-orcamento{
+	border-top: 2px solid #E45B00 !important;
+	background-color: #E45B00 !important;
+	color: #000;
+}
+.table-head1-orcamento{
+	border-top: 1px solid #FD6500 !important;
+	background-color: #FD6500 !important;
+	color: #000;
+}
+.table-r0-orcamento{
+	border-top: 1px solid #FF8B3E !important;
+	background-color: #FF8B3E !important;
+	color: #000;
+}
+.table-r1-orcamento{
+	border-top: 1px solid #FF9B59 !important;
+	background-color: #FF9B59 !important;
+	color: #000;
+}
+
+/*Inscritos*/
+.table-head0-inscritos{
+	border-top: 2px solid #009898 !important;
+	background-color: #009898 !important;
+	color: #000;
+}
+.table-head1-inscritos{
+	border-top: 1px solid #00BBBB !important;
+	background-color: #00BBBB !important;
+	color: #000;
+}
+.table-r0-inscritos{
+	border-top: 1px solid #00D2D2 !important;
+	background-color: #00D2D2 !important;
+	color: #000;
+}
+.table-r1-inscritos{
+	border-top: 1px solid #00DDDD !important;
+	background-color: #00DDDD !important;
+	color: #000;
+}
+
+/*Reprovados*/
+.table-head0-reprovados{
+	border-top: 2px solid #CB0073 !important;
+	background-color: #CB0073 !important;
+	color: #000;
+}
+.table-head1-reprovados{
+	border-top: 1px solid #F4008C !important;
+	background-color: #F4008C !important;
+	color: #000;
+}
+.table-r0-reprovados{
+	border-top: 1px solid #FF37AA !important;
+	background-color: #FF37AA !important;
+	color: #000;
+}
+.table-r1-reprovados{
+	border-top: 1px solid #FF64BD !important;
+	background-color: #FF64BD !important;
+	color: #000;
+}
+
+/*Justica superior*/
+.table-row-superior{
+	border-top: 2px solid #513C65 !important;
+	background-color: #513C65 !important;
+	color: white;
+}
+.table-row-eleitoral{
+	border-top: 1px solid #6C5188 !important;
+	background-color: #6C5188 !important;
+	color: white;
+}
+.table-row-trabalho{
+	border-top: 1px solid #795A98 !important;
+	background-color: #795A98 !important;
+	color: white;
+}
+.table-row-federal{
+	border-top: 1px solid #8262A2!important;
+	background-color: #8262A2 !important;
+	color: white;
+}
+.table-row-estadual{
+	border-top: 1px solid #8B6DA9 !important;
+	background-color: #8B6DA9 !important;
+	color: white;
+}
+.table-row-militar{
+	border-top: 1px solid #9A80B5 !important;
+	background-color: #9A80B5 !important;
+	color: white;
+}
+
+/*TDs agregadores*/
+.td-agregador{
+	padding: 0 !important;
+}
+.table-ramo-justica{
+	margin-bottom: 0 !important;
+	display: table !important;
+}
+/*ACCORDION AREAS*/
+.ui-accordion-content {
+	height: auto !important;
+}
+
+.training {
+	margin-left: 15%;
+	width: 85% !important;
+}
+.training th{
+	width: 31%;
+}
+table#resources th {
+	width: 50%;
+	vertical-align: middle;
+}
+
+.input-width {
+	width: 250px !important;
+}
+
+.mform .fitem fieldset.felement {
+	width: 82.5%;
+}
+
+.intructions {
+	background-color: #FFF;
+	padding: 5px;
+	border-radius: 5px;
+}
+.hide_instructions {
+	display: none;
+}
+.observacoes{
+	background-color: #FFF;
+	border: 1px solid #AAAAAA;
+	padding: 5px;
+	border-radius: 5px;
+	width: 82%;
+}
+#errmsg {
+	color: red;
+}
+
+.textarea {
+	width: 100%;
+}
+
+.areas {
+	background-color: #E6E6E6;
+	font-weight: bold
+}
+.bigtable td, .bigtable th{
+	font-size: 10px;
+}
+
+
+/*Twitter Bootstrap Botoes*/
+.btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-success:focus,
+.btn-success.focus {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #255625;
+}
+.btn-success:hover {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.btn-success:active:hover,
+.btn-success.active:hover,
+.open > .dropdown-toggle.btn-success:hover,
+.btn-success:active:focus,
+.btn-success.active:focus,
+.open > .dropdown-toggle.btn-success:focus,
+.btn-success:active.focus,
+.btn-success.active.focus,
+.open > .dropdown-toggle.btn-success.focus {
+  color: #fff;
+  background-color: #398439;
+  border-color: #255625;
+}
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  background-image: none;
+}
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled.focus,
+.btn-success[disabled].focus,
+fieldset[disabled] .btn-success.focus {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-success .badge {
+  color: #5cb85c;
+  background-color: #fff;
+}
+.btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+  padding: padding: 6px 12px !important;
+}
+.btn-info:focus,
+.btn-info.focus {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #1b6d85;
+}
+.btn-info:hover {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.btn-info:active:hover,
+.btn-info.active:hover,
+.open > .dropdown-toggle.btn-info:hover,
+.btn-info:active:focus,
+.btn-info.active:focus,
+.open > .dropdown-toggle.btn-info:focus,
+.btn-info:active.focus,
+.btn-info.active.focus,
+.open > .dropdown-toggle.btn-info.focus {
+  color: #fff;
+  background-color: #269abc;
+  border-color: #1b6d85;
+}
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+  background-image: none;
+}
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled.focus,
+.btn-info[disabled].focus,
+fieldset[disabled] .btn-info.focus {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.btn-info .badge {
+  color: #5bc0de;
+  background-color: #fff;
+}
+.btn-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-warning:focus,
+.btn-warning.focus {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #985f0d;
+}
+.btn-warning:hover {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.btn-warning:active,
+.btn-warning.active,
+.open > .dropdown-toggle.btn-warning {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.btn-warning:active:hover,
+.btn-warning.active:hover,
+.open > .dropdown-toggle.btn-warning:hover,
+.btn-warning:active:focus,
+.btn-warning.active:focus,
+.open > .dropdown-toggle.btn-warning:focus,
+.btn-warning:active.focus,
+.btn-warning.active.focus,
+.open > .dropdown-toggle.btn-warning.focus {
+  color: #fff;
+  background-color: #d58512;
+  border-color: #985f0d;
+}
+.btn-warning:active,
+.btn-warning.active,
+.open > .dropdown-toggle.btn-warning {
+  background-image: none;
+}
+.btn-warning.disabled:hover,
+.btn-warning[disabled]:hover,
+fieldset[disabled] .btn-warning:hover,
+.btn-warning.disabled:focus,
+.btn-warning[disabled]:focus,
+fieldset[disabled] .btn-warning:focus,
+.btn-warning.disabled.focus,
+.btn-warning[disabled].focus,
+fieldset[disabled] .btn-warning.focus {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-warning .badge {
+  color: #f0ad4e;
+  background-color: #fff;
+}
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.btn-danger:focus,
+.btn-danger.focus {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #761c19;
+}
+.btn-danger:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.btn-danger:active:hover,
+.btn-danger.active:hover,
+.open > .dropdown-toggle.btn-danger:hover,
+.btn-danger:active:focus,
+.btn-danger.active:focus,
+.open > .dropdown-toggle.btn-danger:focus,
+.btn-danger:active.focus,
+.btn-danger.active.focus,
+.open > .dropdown-toggle.btn-danger.focus {
+  color: #fff;
+  background-color: #ac2925;
+  border-color: #761c19;
+}
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  background-image: none;
+}
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled.focus,
+.btn-danger[disabled].focus,
+fieldset[disabled] .btn-danger.focus {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.btn-danger .badge {
+  color: #d9534f;
+  background-color: #fff;
+}
+.skillsimpletable tr td{
+	padding: 2px;
+	width: 49% !important;
+}
+.skillsimpletable tr td input {
+	margin-bottom: 2px;
+}
+.skillsimpletable{
+	display: table !important;
+}
+.skillsimpletable label{
+	font-size: inherit !important;
+}
+
+.list-skill-areas .panel-heading .panel-title{
+	background-color: #eeeeee !important;
+    font-size: 13px !important;
+    padding: 5px !important;
+}
+.list-skill-areas .panel-heading{
+	margin-bottom: 0px !important;
+}

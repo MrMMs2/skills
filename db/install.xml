@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/skills/db" VERSION="20101203" COMMENT="XMLDB file for Moodle mod/skills"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="skills" COMMENT="Default comment for skills, please edit me">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true"/>
+        <FIELD NAME="course" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" COMMENT="Course skills activity belongs to"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="name field for moodle instances"/>
+        <FIELD NAME="intro" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="General introduction of the skills activity"/>
+        <FIELD NAME="introformat" TYPE="int" LENGTH="4" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" COMMENT="Format of the intro field (MOODLE, HTML, MARKDOWN...)"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="grade" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="100" SEQUENCE="false" COMMENT="The maximum grade. Can be negative to indicate the use of a scale."/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="course" UNIQUE="false" FIELDS="course"/>
+      </INDEXES>
+    </TABLE>
+	
+	<TABLE NAME="skills_dataform" COMMENT="Tabela que recebera os dados do formulario">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true"/>
+        <FIELD NAME="skillsid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" COMMENT="Referencia a tabela skills"/>
+        <FIELD NAME="coursemodulesid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" COMMENT="Referencia ao id do modulo na tabela que relaciona cursos e modulos."/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" COMMENT="Referencia ao id do usuario logado."/>
+        <FIELD NAME="yearprevious" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Ano anterior"/>
+        <FIELD NAME="currentyear" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Ano atual"/>
+        <FIELD NAME="organ" TYPE="char" LENGTH="15" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" COMMENT="Orgao ou tribunal que preencheu"/>
+        <FIELD NAME="qtdeservers" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" COMMENT="Quantidade de servidores do orgao" />
+        <FIELD NAME="qtdemagistrates" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" COMMENT="Quantidade de juizes do orgao" />
+        <FIELD NAME="trainingunit" TYPE="char" LENGTH="255" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" COMMENT="Unidade responsavel pela formacao e aperfeicoamento de servidores" />
+        <FIELD NAME="annualplanning" TYPE="char" LENGTH="10" NOTNULL="false" DEFAULT="no" UNSIGNED="true" SEQUENCE="false" COMMENT="Existe planejamento anual?" />
+        <FIELD NAME="methodology" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Metodologias aplicadas"/>
+        <FIELD NAME="formativeactionsyearprevious" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Acoes formativas ano anterior"/>
+        <FIELD NAME="trainingactionsociety" TYPE="char" LENGTH="128" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" COMMENT="Armazena se ha acoes de capacitacao abertas a sociedade. Se sim, recebe JSON com nturmas, ninscritos e ncapacitados." />
+        <FIELD NAME="structuretraining" TYPE="char" LENGTH="512" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" COMMENT="Armazena se ha estrutura de treinamento." />
+        <FIELD NAME="structtrainingsuficiente" TYPE="char" LENGTH="10" NOTNULL="false" DEFAULT="no" UNSIGNED="true" SEQUENCE="false" COMMENT="Diz se a estrutura de capacitacao e suficiente." />
+		<FIELD NAME="hourclassserver" TYPE="char" LENGTH="50" NOTNULL="true" SEQUENCE="false" COMMENT="Media anual de horas por servidor"/>
+		<FIELD NAME="budgettraining" TYPE="char" LENGTH="50" NOTNULL="true" SEQUENCE="false" COMMENT="Dotacao orcamentaria prevista para atender as necessidades de formacao e aperfeicoamento"/>
+		<FIELD NAME="budgetaddmagistrates" TYPE="char" LENGTH="10" NOTNULL="false" SEQUENCE="false" DEFAULT="no" COMMENT="Diz se Dotacao orcamentaria inclui magistrados."/>
+		<FIELD NAME="runvalue" TYPE="char" LENGTH="45" NOTNULL="true" SEQUENCE="false" COMMENT="Despesa realizada"/>
+		<FIELD NAME="runvalbyformaction" TYPE="char" LENGTH="512" NOTNULL="false" SEQUENCE="false" COMMENT="Despesa realizada por acao formativa."/>
+		<FIELD NAME="othersvalrun" TYPE="char" LENGTH="512" NOTNULL="false" SEQUENCE="false" COMMENT="Outras despesas realizadas"/>
+		<FIELD NAME="programskills" TYPE="char" LENGTH="10" NOTNULL="false" DEFAULT="no" SEQUENCE="false" COMMENT="Ha um programa de capacitacao?"/>
+		<FIELD NAME="stageprogramskills" TYPE="char" LENGTH="512" NOTNULL="false" SEQUENCE="false" COMMENT="Estagio do programa de gestao por competencia"/>
+		<FIELD NAME="phasestageprogramskills" TYPE="char" LENGTH="1024" NOTNULL="false" SEQUENCE="false" COMMENT="Fases do estagio do programa de gestao por competencia"/>
+		<FIELD NAME="evaluation" TYPE="char" LENGTH="10" NOTNULL="false" DEFAULT="no" SEQUENCE="false" COMMENT="Ha algum tipo de avalicacao?"/>
+		<FIELD NAME="typeevaluation" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Tipos de avaliacao"/>
+		<FIELD NAME="planactiontngnextyear" TYPE="char" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="Ha um planejamento para acoes de capacitacao no ano seguinte?"/>
+		<FIELD NAME="fileplannextyear" TYPE="char" LENGTH="45" NOTNULL="false" SEQUENCE="false" COMMENT="Anexo do planejamento do ano seguinte." />
+		<FIELD NAME="formativeactionsyearcurrent" TYPE="text"  NOTNULL="true" SEQUENCE="false" COMMENT="Acoes formativas"/>
+		<FIELD NAME="budgetnextyear" TYPE="char" LENGTH="50"  NOTNULL="true" SEQUENCE="false" COMMENT="Previsao orcamentaria do ano seguinte."/>
+		<FIELD NAME="budgetaddmgtdnextyear" TYPE="char" LENGTH="10" NOTNULL="false" SEQUENCE="false" DEFAULT="no" COMMENT="Diz se Dotacao orcamentaria do ano seguinte inclui magistrados."/>
+		<FIELD NAME="createdate" TYPE="int" LENGTH="10"  NOTNULL="true" SEQUENCE="false" COMMENT="data de criacao"/>
+		<FIELD NAME="comments" TYPE="text"  NOTNULL="false" SEQUENCE="false" COMMENT="Anotacoes"/>
+		<FIELD NAME="sugestions" TYPE="text"  NOTNULL="false" SEQUENCE="false" COMMENT="sugestions"/>
+		<FIELD NAME="savefinish" TYPE="int" LENGTH="1" DEFAULT="0" NOTNULL="false" SEQUENCE="false" />
+		<FIELD NAME="beinfullreport" TYPE="int" LENGTH="1" DEFAULT="0" NOTNULL="false" SEQUENCE="false" />
+		<FIELD NAME="confirmation" TYPE="char" LENGTH="1"  NOTNULL="false" SEQUENCE="false" />
+	 </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="skillsid" UNIQUE="false" FIELDS="skillsid"/>
+      </INDEXES>
+    </TABLE>
+	
+	<TABLE NAME="skills_modality" COMMENT="Armazena modalidades">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Nome da modalidade de ensino"/>
+		<FIELD NAME="description" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Descricao da modalidade"/>
+        <FIELD NAME="status" TYPE="int" LENGTH="1" NOTNULL="true" SEQUENCE="false" DEFAULT="1" COMMENT="se ativo ou inativo"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+	
+	<TABLE NAME="skills_areas" COMMENT="Armazena de areas">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Nome da modalidade de ensino"/>
+        <FIELD NAME="description" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Descricao da modalidade"/>
+        <FIELD NAME="status" TYPE="int" LENGTH="1" NOTNULL="true" SEQUENCE="false" DEFAULT="1" COMMENT="se ativo ou inativo"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+	
+	<TABLE NAME="skills_training" COMMENT="Armazena de treinamentos">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="500" NOTNULL="true" SEQUENCE="false" COMMENT="Nome"/>
+        <FIELD NAME="description" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Descricao"/>
+        <FIELD NAME="status" TYPE="int" LENGTH="1" NOTNULL="true" SEQUENCE="false" DEFAULT="1" COMMENT="se ativo ou inativo"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+	
+	<TABLE NAME="skills_dataform_areas" COMMENT="Tabela que referencia os dados do formulario com tabelas com dado de codigo">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true"/>
+        <FIELD NAME="dataformid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Faz referencia a tabela skills_dataform"/>
+        <FIELD NAME="areasid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Faz referencia a tabela skills_areas"/>
+        <FIELD NAME="modalityid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Faz referencia a tabela skills_modality"/>
+        <FIELD NAME="numbercourses" TYPE="int" LENGTH="11" NOTNULL="false" SEQUENCE="false" COMMENT="Numero de cursos"/>
+        <FIELD NAME="numbervacancies" TYPE="int" LENGTH="11" NOTNULL="false" SEQUENCE="false" COMMENT="Numero de vagas"/>
+        <FIELD NAME="number_trained" TYPE="int" LENGTH="11" NOTNULL="false" SEQUENCE="false" COMMENT="Numero de capacitados"/>
+        <FIELD NAME="numberenrollees" TYPE="int" LENGTH="11" NOTNULL="false" SEQUENCE="false" COMMENT="Numero de inscritos"/>
+        <FIELD NAME="numberdisapproved" TYPE="int" LENGTH="11" NOTNULL="false" SEQUENCE="false" COMMENT="Numero de reprovados"/>
+        <FIELD NAME="evasion" TYPE="char" LENGTH="20" NOTNULL="true" SEQUENCE="false" COMMENT="Percentual de evasao"/>
+        <FIELD NAME="numberinternalinstructors" TYPE="int" LENGTH="11" NOTNULL="false" SEQUENCE="false" COMMENT="Numero de instrutores internos"/>
+        <FIELD NAME="numberexternallinstructors" TYPE="int" LENGTH="11" NOTNULL="false" SEQUENCE="false" COMMENT="Numero de instrutores externos"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+	  <INDEXES>
+        <INDEX NAME="dataformid" UNIQUE="false" FIELDS="dataformid"/>
+        <INDEX NAME="areasid" UNIQUE="false" FIELDS="areasid"/>
+        <INDEX NAME="modalityid" UNIQUE="false" FIELDS="modalityid"/>
+      </INDEXES>
+    </TABLE>
+	
+	<TABLE NAME="skills_dataform_training" COMMENT="Tabela que referencia os dados do formulario com os dados de treinamentos">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true"/>
+        <FIELD NAME="trainingid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Faz referencia a tabela skills_training"/>
+        <FIELD NAME="dataformid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Faz referencia a tabela skills_dataform"/>
+        <FIELD NAME="theme" TYPE="char" LENGTH="500" NOTNULL="true" SEQUENCE="false" DEFAULT="NAO/IDENTIFICADO" COMMENT="Tema do treinamento"/>
+        <FIELD NAME="numberparticipants" TYPE="int" LENGTH="11" NOTNULL="false" DEFAULT="0" SEQUENCE="false" COMMENT="Numero de participantes"/>
+        <FIELD NAME="numbertraining" TYPE="char" LENGTH="20" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Numero de treinamentos"/>
+        <FIELD NAME="description" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Descricao"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+	  <INDEXES>
+        <INDEX NAME="trainingid" UNIQUE="false" FIELDS="trainingid"/>
+        <INDEX NAME="dataformid" UNIQUE="false" FIELDS="dataformid"/>
+      </INDEXES>
+    </TABLE>
+	
+  </TABLES>
+</XMLDB>
